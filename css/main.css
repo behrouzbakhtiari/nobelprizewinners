@@ -2391,3 +2391,7 @@ p {
     font-size: 2rem;
   }
 }
+
+.card-detail-row strong {
+  float: left;
+}
