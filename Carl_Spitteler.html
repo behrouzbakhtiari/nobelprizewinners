@@ -1,0 +1,110 @@
+<!doctype html>
+<html dir="rtl" lang="fa">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="switch-box">
+                <div class="switch on"></div>
+                <label class="switch-label ">حالت روز</label>
+                <h1> برندگان نوبل ادبیات</h1>
+            </div>
+        </div>
+    </header>
+        <section class="detail">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <div class="detail-avatar">
+                        <div class="in">
+                            <img src="images/authors/337113.jpg" alt="کارل اشپیتلر">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <h1 class="detail-name">
+                        کارل اشپیتلر
+                    </h1>
+                    <div class="detail-rating-box">
+                        <div class="rating-holder">
+                            <div class="c-rating" data-rating-value="2.75">
+                                <button type="button">۱</button>
+                                <button type="button">۲</button>
+                                <button type="button">۳</button>
+                                <button type="button">۴</button>
+                                <button type="button">۵</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-summary">
+                        <div class="detail-info-row">
+                            <span>زادروز: </span>
+                            <strong>۱۸۴۵/۰۴/۲۴</strong>
+                        </div>
+                        <div class="detail-info-row">
+                            <span>مرگ: </span>
+                            <strong>۱۹۲۴/۱۲/۲۹</strong>
+                        </div>
+                        <div class="detail-info-row">
+                            <span>کشور: </span>
+                            <strong>سوئیس</strong>
+                        </div>
+                    </div>
+                    <div class="detail-description">
+                        
+                    </div>
+                </div>
+                <span class="detail-ribbon">
+                    <span class="ribbon"><span>۱۹۱۹</span></span>
+                </span>
+            </div>
+
+        </div>
+    </section>
+    <section class="original-book">
+        <div class="container">
+            <h2 class="lq-head">
+                <span>
+                    کتاب ها
+                </span>
+            </h2>
+            
+        </div>
+    </section>
+    <section class="footer">
+        طراحی و پیاده سازی با <i>&#x2764; </i> برای ایرانیان سرتاسر جهان.
+    </section>
+</body>
+<script>
+    const SWITCH = document.querySelector(".switch");
+    const BODY = document.querySelector("body");
+    const LABEL = document.querySelector(".switch-label");
+
+    SWITCH.addEventListener("click", function () {
+        if (this.classList.contains("on")) {
+            this.classList.remove("on");
+            BODY.classList.add("dark");
+            LABEL.innerHTML = "حالت شب";
+        } else {
+
+            this.classList.add("on");
+            BODY.classList.remove("dark");
+            LABEL.innerHTML = "حالت روز";
+        }
+    });
+</script>
+
+</html>
