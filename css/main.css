@@ -312,23 +312,35 @@ a {
 .text-center {
   text-align: center; }
 
+.text-right {
+  text-align: right !important; }
+
 header {
   position: fixed;
   left: 0;
-  z-index: 999;
+  z-index: 999999;
   right: 0;
   top: 0;
   background-color: #fff;
   box-shadow: 0 1px 2px 0 rgba(25, 25, 25, 0.2); }
+  header a {
+    margin: 0 0.5rem;
+    color: #191629; }
 
 .switch-box {
   display: flex;
   justify-content: center;
+  align-items: center; }
+  .switch-box h1 {
+    margin: 0 auto;
+    padding: 1rem;
+    color: #231f3a; }
+
+.sw {
+  display: flex;
+  justify-content: center;
   align-items: center;
   direction: ltr; }
-  .switch-box h1 {
-    margin-left: auto;
-    color: #231f3a; }
 
 .switch {
   display: flex;
@@ -498,7 +510,13 @@ header {
   text-align: center;
   color: #555;
   margin: 2rem 0 0.5rem;
-  font-size: 0.8rem; }
+  font-size: 0.8rem;
+  line-height: 2; }
+  .footer .download-info {
+    font-size: 1rem;
+    margin-bottom: 1rem; }
+    .footer .download-info a {
+      color: #F44336; }
   .footer i {
     color: red;
     font-style: normal; }
@@ -1330,7 +1348,9 @@ html {
       border-bottom: 1px solid #231f3a; }
 
 .original-book-pic {
-  border-radius: 1rem; }
+  border-radius: 1rem;
+  margin: auto;
+  display: block; }
 
 .books {
   background: #fff;
@@ -1453,6 +1473,19 @@ p {
       cursor: pointer; }
     .chart .percentage:hover:after, .chart .percentage:focus:after {
       background-color: #aaa; }
+  .chart .percentage-0:after {
+    width: 0%; }
+  .chart .percentage-0 strong {
+    left: 10%;
+    position: absolute;
+    background: #6b6b6b;
+    padding: 0.4rem 0.5rem;
+    color: #fff;
+    border-radius: 0.3rem;
+    font-size: 0.7rem;
+    margin-top: 0.4rem;
+    z-index: 99999;
+    text-align: right; }
   .chart .percentage-1:after {
     width: 1%; }
   .chart .percentage-1 strong {
@@ -2754,10 +2787,54 @@ p {
     z-index: 99999;
     text-align: right; }
 
+.list {
+  margin-top: 7rem; }
+
+.table-users {
+  margin-bottom: 2rem;
+  border: 1px solid #191629;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+  max-width: calc(100% - 2em);
+  overflow: hidden; }
+  .table-users .header {
+    background-color: #191629;
+    color: white;
+    font-size: 1.5em;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase; }
+  .table-users img {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px; }
+  .table-users table {
+    width: 100%; }
+    .table-users table td,
+    .table-users table th {
+      color: #1b182d;
+      padding: 10px; }
+    .table-users table td {
+      text-align: center;
+      vertical-align: middle; }
+      .table-users table td:last-child {
+        font-size: 0.95em;
+        line-height: 1.4; }
+    .table-users table th {
+      border-bottom: 2px solid;
+      background: #fff;
+      font-weight: bold; }
+    .table-users table tr:nth-child(2n) {
+      background-color: white; }
+    .table-users table tr:nth-child(2n + 1) {
+      background-color: #e8e6f2; }
+
 .dark {
   background: #27262b; }
   .dark header {
     background-color: #17161d; }
+  .dark a {
+    color: #fff; }
   .dark .switch-box {
     background-color: #17161d;
     color: #fff; }
@@ -2822,11 +2899,24 @@ p {
     background-color: #17161d; }
   .dark .chart .percentage {
     background: repeating-linear-gradient(to right, #27262b, #27262b 1px, #17161d 1px, #17161d 5%); }
+  .dark .table-users {
+    border: 1px solid #17161d; }
+  .dark .table-users .header {
+    background-color: #17161d; }
 
-@media (min-width: 480px) {
+@media (max-width: 767px) {
   .switch-box h1 {
-    font-size: 1.4rem; } }
+    font-size: 1.2rem;
+    padding: 0.6rem; }
+  .detail {
+    margin-top: 4rem; }
+  .detail-avatar {
+    margin-bottom: 2rem; }
+  .detail-summary {
+    display: block; }
+  .detail-info-row {
+    width: 98%; } }
 
 @media (min-width: 768px) {
   .switch-box h1 {
-    font-size: 2rem; } }
+    font-size: 1.6rem; } }
